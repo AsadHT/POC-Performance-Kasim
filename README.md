@@ -1,8 +1,8 @@
 # Installation
-* K6 - https://k6.io/open-source/
+* k6 - https://k6.io/open-source/
 
 # Configuration
-* Create a Grafa Cloud account to publish your results to analyze properly - https://grafana.com/auth/sign-in
+* Create a Grafana Cloud account to publish your results to analyze properly - https://grafana.com/auth/sign-in
 
 # How To Run Tests 
 * Login to grafana cloud via your token :
