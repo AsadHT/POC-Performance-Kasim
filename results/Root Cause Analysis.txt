@@ -1,0 +1,13 @@
+I used 2 different data-driven test scenarios to run spike tests. The first one includes too many CRUD operation than the second one. The purpose here is to understand if there is any indexing or table/row lock issue in DB which can increase the response time. Then, I ran 2 different spike test patterns for performance test runs. 
+
+The first pattern is rapid increase to peak load -> peak load for a certain time -> rapid decrease to normal load -> normal load for a certain time -> rapid increase to peak load ->  peak load for a certain time -> rapid decrease to 0
+
+The second pattern is rapid increase to peak load -> peak load for a certain time -> rapid decrease to 0 
+
+In first pattern I wanted to monitor the application behaviour under spike fluctuations in load. In the second pattern I simulated a basic spike test pattern.
+
+In the results there are no timeouts but there are too many 500-Internal Server Errors. These are errors which point out that there is lack of resources in the test environment. We have 2 ways to resolve this issue. The first one is to optimize the whole performance of the application from DB to Code-Configuration level. The second one is to increase the resource allocation of the application.
+
+I defined the response time threshold of p(95) as less than 900ms. I see that in both test results this metric value is at least 10x higher than the threshold. This means that we need to identify bottlenecks and optimize the whole performance of the application from DB to Code-Configuration level such as indexing, resolving DB lock issues, caching, code optimizations, configuration changes .. etc. 
+
+Especially, Login API response time is too high. It needs to be investigated firstly.
