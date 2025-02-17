@@ -8,3 +8,6 @@
 * Login to grafana cloud via your token :
     ``` k6 cloud login ```
 * Run tests : ```k6 run api_demo.js -o cloud```
+
+# Results
+* Please read the summary of results from here : https://github.com/AsadHT/POC-Performance-Kasim/blob/main/results/Root%20Cause%20Analysis.txt
