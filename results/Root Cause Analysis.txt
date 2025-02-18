@@ -1,4 +1,15 @@
-I used 2 different data-driven test scenarios to run spike tests. The first one includes too many CRUD operations than the second one. The purpose here is to understand if there is any indexing or table/row lock issue in DB which can increase the response time. Then, I ran 2 different spike test patterns for performance test runs. 
+I used 2 different data-driven test scenarios to run spike tests. The first one includes too many CRUD operations than the second one. The purpose here is to understand if there is any indexing or table/row lock issue in DB which can increase the response time. 
+Each Scenario includes these actions in order
+1) Register the user
+2) Calling public endpoints
+3) Login the user
+4) Create Retrieve and modify crocodiles
+5) Delete crocodiles
+6) Log out
+
+
+
+Then, I ran 2 different spike test patterns for performance test runs. 
 
 The first pattern is rapid increase to peak load -> peak load for a certain time -> rapid decrease to normal load -> normal load for a certain time -> rapid increase to peak load ->  peak load for a certain time -> rapid decrease to 0
 
